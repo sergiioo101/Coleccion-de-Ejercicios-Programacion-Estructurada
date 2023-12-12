@@ -23,3 +23,7 @@ int main() {
     strcpy(estudiante2->nombre, "Ana");
     estudiante2->edad = 22;
     estudiante2->promedio = 9.8;
+    // d. Punteros y estructuras
+    struct Estudiante *punteroEst = &estudiante1;
+    printf("Detalles del estudiante punteroEst:\n");
+    imprimirEstudiante(punteroEst);
