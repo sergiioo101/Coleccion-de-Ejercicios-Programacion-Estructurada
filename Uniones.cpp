@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <string.h>
+#include <cstdio>
+#include <cstring>
 
 // Definición de la unión
 union Dato {
@@ -10,7 +10,7 @@ union Dato {
 
 int main() {
     // Crear una variable de la unión
-    union Dato dato;
+    union Dato dato{};
     // Asignar diferentes tipos de valores
     dato.i = 10;
     printf("dato.i: %d\n", dato.i);
