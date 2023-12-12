@@ -10,3 +10,7 @@ typedef struct {
 void imprimirEstudiante(Estudiante est) {
     printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", est.nombre, est.edad, est.promedio);
 }
+// b. Pasar una estructura por referencia como argumento
+void modificarEstudiante(Estudiante *est) {
+    est->edad = 30;
+}
