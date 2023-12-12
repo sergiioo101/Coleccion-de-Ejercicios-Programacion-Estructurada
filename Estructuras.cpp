@@ -14,7 +14,7 @@ void imprimirEstudiante(struct Estudiante* estudiante) {
 int main() {
     // a. Constitución de una estructura
     struct Estudiante estudiante1;
-// b. Instanciación de estructuras
+    // b. Instanciación de estructuras
     strcpy(estudiante1.nombre, "Juan");
     estudiante1.edad = 20;
     estudiante1.promedio = 9.5;
