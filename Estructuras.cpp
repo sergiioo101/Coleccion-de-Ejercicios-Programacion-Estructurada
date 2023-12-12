@@ -42,4 +42,18 @@ int main() {
     for (int i = 0; i < numEstudiantes; ++i) {
         imprimirEstudiante(&listaEstudiantes[i]);
     }
+    // Eliminar el estudiante1 de la lista (en este caso, simplemente decrementamos el contador)
+    numEstudiantes--;
+
+    // Imprimir la lista actualizada
+    printf("\nLista de Estudiantes después de eliminar:\n");
+    for (int i = 0; i < numEstudiantes; ++i) {
+        imprimirEstudiante(&listaEstudiantes[i]);
+    }
+
+    // Liberar la memoria asignada con malloc
+    free(estudiante2);
+
+    return 0;
+}
 
