@@ -27,3 +27,18 @@ int main() {
     struct Estudiante *punteroEst = &estudiante1;
     printf("Detalles del estudiante punteroEst:\n");
     imprimirEstudiante(punteroEst);
+    // e. Organización de la programación
+
+    // Crear una lista de estudiantes (puedes usar un arreglo en este ejemplo)
+    struct Estudiante listaEstudiantes[10];
+    int numEstudiantes = 0; // Contador de estudiantes en la lista
+
+    // Añadir estudiantes a la lista
+    listaEstudiantes[numEstudiantes++] = estudiante1;
+    listaEstudiantes[numEstudiantes++] = *estudiante2;
+
+    // Imprimir los detalles de los estudiantes en la lista
+    printf("\nLista de Estudiantes:\n");
+    for (int i = 0; i < numEstudiantes; ++i) {
+        imprimirEstudiante(&listaEstudiantes[i]);
+    }
