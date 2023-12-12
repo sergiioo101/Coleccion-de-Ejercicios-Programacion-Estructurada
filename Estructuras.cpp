@@ -11,3 +11,6 @@ struct Estudiante{
 void imprimirEstudiante(struct Estudiante* estudiante) {
     printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", estudiante->nombre, estudiante->edad, estudiante->promedio);
 }
+int main() {
+    // a. Constitución de una estructura
+    struct Estudiante estudiante1;
