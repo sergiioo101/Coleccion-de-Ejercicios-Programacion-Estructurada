@@ -1,6 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
 struct Estudiante{
     char nombre [20];
@@ -13,19 +13,19 @@ void imprimirEstudiante(struct Estudiante* estudiante) {
 }
 int main() {
     // a. Constitución de una estructura
-    struct Estudiante estudiante1;
+    struct Estudiante estudiante1{};
     // b. Instanciación de estructuras
     strcpy(estudiante1.nombre, "Juan");
     estudiante1.edad = 20;
     estudiante1.promedio = 9.5;
     // c. Instanciación con el operador malloc
-    struct Estudiante *estudiante2 = (struct Estudiante *) malloc(sizeof(struct Estudiante));
+    auto *estudiante2 = (struct Estudiante *) malloc(sizeof(struct Estudiante));
     strcpy(estudiante2->nombre, "Ana");
     estudiante2->edad = 22;
     estudiante2->promedio = 9.8;
     // d. Punteros y estructuras
     struct Estudiante *punteroEst = &estudiante1;
-    printf("Detalles del estudiante punteroEst:\n");
+    printf("Detalles del estudiante puntero:\n");
     imprimirEstudiante(punteroEst);
     // e. Organización de la programación
 
@@ -46,7 +46,7 @@ int main() {
     numEstudiantes--;
 
     // Imprimir la lista actualizada
-    printf("\nLista de Estudiantes después de eliminar:\n");
+    printf("\nLista de Estudiantes despues de eliminar:\n");
     for (int i = 0; i < numEstudiantes; ++i) {
         imprimirEstudiante(&listaEstudiantes[i]);
     }
