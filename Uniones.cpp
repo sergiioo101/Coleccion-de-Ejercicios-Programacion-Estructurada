@@ -7,3 +7,7 @@ union Dato {
     float f;
     char str[20];
 };
+
+int main() {
+    // Crear una variable de la unión
+    union Dato dato;
